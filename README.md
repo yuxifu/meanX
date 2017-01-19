@@ -1,11 +1,11 @@
-# paizatter-yuxi
+# meanX
 
-This project is an updated version of
+This project is based on [Twitter-like full-stack web service](https://github.com/yuxifu/meanX-yuxi)
 
-- [Building Twitter-like full-stack web service in 1 hour - MEAN stack development (2)](http://engineering.paiza.io/entry/2015/07/09/154028)
-- [paizatter](https://github.com/gi-no/paizatter)
-
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.1.1.
+This project serves as a playground for
+- trying out modules, techniques, or ways of programming
+- trying out business ideas
+- base of a general purpose personal Web API and Web Site
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ Running `npm test` will run the unit tests with karma.
 
 ## Code Generation
 
-`yo angular-fullstack paizatter`
+`yo angular-fullstack X`
 
 ### Client
 - What would you like to write scripts with? `Babel`
@@ -54,9 +54,3 @@ Running `npm test` will run the unit tests with karma.
 ### Project
 - What would you like to write tests with? `Mocha + Chai + Sinon`
 - What would you like to write Chai assertions with? `Expect`
-
-## Create time format filter
-
-1. Install momentjs `npm install --save momentjs`
-2. Run `yo angular-fullstack:filter fromNow` to generate filter code
-3. Use filter
