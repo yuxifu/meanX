@@ -10,6 +10,6 @@ export function fromNowFilter() {
   };
 }
 
-export default angular.module('paizatterYuxiApp.fromNow', [])
+export default angular.module('meanXApp.fromNow', [])
   .filter('fromNow', fromNowFilter)
   .name;

@@ -5,6 +5,6 @@ import {
   UtilService
 } from './util.service';
 
-export default angular.module('paizatterApp.util', [])
+export default angular.module('meanXApp.util', [])
   .factory('Util', UtilService)
   .name;

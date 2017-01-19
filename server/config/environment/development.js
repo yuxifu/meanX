@@ -7,7 +7,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/paizatter-dev'
+    uri: 'mongodb://localhost/meanX-dev'
   },
 
   // Seed database on startup

@@ -73,6 +73,6 @@ export function Modal($rootScope, $uibModal) {
   };
 }
 
-export default angular.module('paizatterApp.Modal', [])
+export default angular.module('meanXApp.Modal', [])
   .factory('Modal', Modal)
   .name;

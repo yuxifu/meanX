@@ -3,6 +3,6 @@
 import angular from 'angular';
 import SignupController from './signup.controller';
 
-export default angular.module('paizatterApp.signup', [])
+export default angular.module('meanXApp.signup', [])
   .controller('SignupController', SignupController)
   .name;

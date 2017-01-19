@@ -2,7 +2,7 @@
 
 describe('Filter: fromNow', function() {
   // load the filter's module
-  beforeEach(module('paizatterYuxiApp.fromNow'));
+  beforeEach(module('meanXApp.fromNow'));
 
   // initialize a new instance of the filter before each test
   var fromNow;

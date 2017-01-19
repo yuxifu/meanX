@@ -81,6 +81,6 @@ function Socket(socketFactory) {
   };
 }
 
-export default angular.module('paizatterApp.socket', [])
+export default angular.module('meanXApp.socket', [])
   .factory('socket', Socket)
   .name;

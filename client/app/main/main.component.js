@@ -133,7 +133,7 @@ export class MainController {
 
 }
 
-export default angular.module('paizatterApp.main', [uiRouter])
+export default angular.module('meanXApp.main', [uiRouter])
   .config(routing)
   .component('main', {
     template: require('./main.html'),

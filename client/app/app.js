@@ -31,7 +31,7 @@ import socket from '../components/socket/socket.service';
 
 import './app.scss';
 
-angular.module('paizatterApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
+angular.module('meanXApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
   uiBootstrap, _Auth, account, admin, navbar, footer, main, fromNow, constants, socket, util,
   ngInfiniteScroll ])
   .config(routeConfig)
@@ -50,7 +50,7 @@ angular.module('paizatterApp', [ngCookies, ngResource, ngSanitize, 'btford.socke
 
 angular.element(document)
   .ready(() => {
-    angular.bootstrap(document, ['paizatterApp'], {
+    angular.bootstrap(document, ['meanXApp'], {
       strictDi: true
     });
   });
