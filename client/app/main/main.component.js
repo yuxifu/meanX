@@ -10,11 +10,12 @@ export class MainController {
   noMoreData = false;
 
   /*@ngInject*/
-  constructor($http, $scope, $location, socket, Auth) {
+  constructor($http, $scope, $location, socket, Auth, $state) {
     this.$http = $http;
     this.$location = $location;
     this.socket = socket;
     this.Auth = Auth;
+    this.$state = $state;
 
     $scope.isLoggedIn = Auth.isLoggedInSync;
     $scope.getCurrentUser = Auth.getCurrentUserSync;
@@ -131,6 +132,16 @@ export class MainController {
       );
   }
 
+  search = function(keyword) {
+    var temp = this.$state;
+    if (temp.current.controllerAs === 'routeController') {
+      temp.go(temp.current.name, { keyword: keyword }, { reload: true });
+    } else {
+      temp.go('main', { keyword: keyword }, { reload: true });
+    }
+  };
+
+  //
 }
 
 export default angular.module('meanXApp.main', [uiRouter])
