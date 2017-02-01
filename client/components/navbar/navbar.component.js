@@ -16,6 +16,11 @@ export class NavbarComponent {
     title: 'Starred',
     state: 'starred',
     show: false,
+  },
+  {
+    title: 'Experiment',
+    state: 'xroute',
+    show: false,
   }, ];
 
   isCollapsed = true;

@@ -1,1 +1,39 @@
-<div>This is the xroute view.</div>
+<div>
+  <xcomponent employees="xrouteCtrl.employees" comment="xrouteCtrl.comment" on-clear-comment="xrouteCtrl.clearComment()" on-update-comment="xrouteCtrl.updateComment(comment)"></xcomponent>
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">{{ xrouteCtrl.message }}</div>
+    <form class="thing-form">
+      <p>Comment : <input type="text" placeholder="Add a comment here." ng-model="xrouteCtrl.comment"></p>
+    </form>
+  </div>
+
+  <div ng-controller="XdirectiveController">
+    Date format: <input ng-model="format">
+    <hr/> Current time is: <span my-current-time="format"></span>
+  </div>
+
+  <div ng-controller="xdirCustomerController">
+    <xdir-customer info="naomi" type="name"></xdir-customer>
+    <div xdir-customer type="address" info="naomi"></div>
+  </div>
+
+  <div ng-controller="xdirDialogController">
+    {{message}}
+    <xdir-dialog ng-hide="dialogIsHidden" on-close="hideDialog(message)">
+      Check out the contents, {{name}}!
+    </xdir-dialog>
+  </div>
+
+  <span xdir-event>Drag Me</span>
+
+  <my-tabs>
+    <my-pane title="Hello">
+      <p>Lorem ipsum dolor sit amet</p>
+    </my-pane>
+    <my-pane title="World">
+      <em>Mauris elementum elementum enim at suscipit.</em>
+      <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
+    </my-pane>
+  </my-tabs>
+
+</div>

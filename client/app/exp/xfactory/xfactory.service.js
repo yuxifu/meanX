@@ -6,16 +6,25 @@ export function xfactoryService() {
   // Service logic
   // ...
 
-  var meaningOfLife = 42;
+  var count = 0;
 
   // Public API here
-  return {
-    someMethod() {
-      return meaningOfLife;
-    }
-  };
-}
+  var service = {};
 
+  service.increment = function() {
+      count++;
+      return count;
+  }
+  service.decrement = function() {
+      count--;
+      return count;
+  }
+  service.getCount = function() {
+      return count;
+  }
+
+  return service;
+}
 
 export default angular.module('xApp.xfactory', [])
   .factory('xfactory', xfactoryService)

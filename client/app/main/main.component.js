@@ -10,7 +10,7 @@ export class MainController {
   noMoreData = false;
 
   /*@ngInject*/
-  constructor($http, $scope, $location, socket, Auth, $state) {
+  constructor($http, $scope, $location, socket, Auth, $state, xservice, xfactory) {
     this.$http = $http;
     this.$location = $location;
     this.socket = socket;
@@ -34,6 +34,11 @@ export class MainController {
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');
     });
+
+    console.log('MainController, xservice: ' + xservice.getCount());
+    console.log('MainController, xservice: ' + xservice.increment());
+    console.log('Xroute2Component, xfactory: ' + xfactory.getCount());
+    console.log('Xroute2Component, xfactory: ' + xfactory.increment());
   }
 
   $onInit() {

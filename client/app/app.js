@@ -28,13 +28,34 @@ import fromNow from './fromNow/fromNow.Filter';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
+import xroute from './exp/xroute/xroute.component';
+import xroute2 from './exp/xroute2/xroute2.component';
+import xcomponent from './exp/components/xcomponent/xcomponent.component';
+import xdirective from './exp/xdirective/xdirective.directive';
+import xdirCustomer from './exp/xdirCustomer/xdirCustomer.directive';
+import xdirDialog from './exp/xdirDialog/xdirDialog.directive';
+import xdirEvent from './exp/xdirEvent/xdirEvent.directive';
+import xdirTabs from './exp/xdirTabs/xdirTabs.directive';
+import states from './exp/xroute/xroute.routes';
+import xcontroller from './exp/xcontroller/xcontroller.controller';
+import xservice from './exp/xservice/xservice.service';
+import xfactory from './exp/xfactory/xfactory.service';
+import xprovider from './exp/xprovider/xprovider.service';
+import xfilter from './exp/xfilter/xfilter.filter';
+import xdecorator from './exp/xdecorator/xdecorator.decorator';
 
 import './app.scss';
 
 angular.module('meanXApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
   uiBootstrap, _Auth, account, admin, navbar, footer, main, fromNow, constants, socket, util,
-  ngInfiniteScroll ])
+  ngInfiniteScroll, xroute, xroute2, xcomponent, xdirective, xdirCustomer,states,
+  xcontroller, xdirDialog, xdirEvent, xdirTabs, xservice, xfactory, xprovider,
+  xfilter])
   .config(routeConfig)
+  //.config(states)
+  //.config(["xprovider", function(xprovider) {
+//    xprovider.setCount(10);
+  //}])
   .run(function($rootScope, $location, Auth) {
     'ngInject';
     // Redirect to login if route requires auth and you're not logged in
